@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:padding="16dp"
+                                                   tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/tvPriceHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/fuel_prices"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+            android:id="@+id/tvGasolinePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/gasoline_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPriceHeader" />
+
+    <EditText
+            android:id="@+id/etGasolinePrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvGasolinePrice"
+            app:layout_constraintTop_toTopOf="@id/tvGasolinePrice"
+            app:layout_constraintBottom_toBottomOf="@id/tvGasolinePrice" />
+
+    <TextView
+            android:id="@+id/tvEthanolPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/ethanol_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGasolinePrice" />
+
+    <EditText
+            android:id="@+id/etEthanolPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvEthanolPrice"
+            app:layout_constraintTop_toTopOf="@id/tvEthanolPrice"
+            app:layout_constraintBottom_toBottomOf="@id/tvEthanolPrice" />
+
+    <TextView
+            android:id="@+id/tvConsumptionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/fuel_consumption"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvEthanolPrice" />
+
+    <TextView
+            android:id="@+id/tvGasolineConsumption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/gasoline_consumption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvConsumptionHeader" />
+
+    <EditText
+            android:id="@+id/etGasolineConsumption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvGasolineConsumption"
+            app:layout_constraintTop_toTopOf="@id/tvGasolineConsumption"
+            app:layout_constraintBottom_toBottomOf="@id/tvGasolineConsumption" />
+
+    <Button
+            android:id="@+id/btnSelectFuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_fuel"
+            app:layout_constraintEnd_toEndOf="@id/etGasolineConsumption"
+            app:layout_constraintTop_toTopOf="@id/tvGasolineConsumption"
+            app:layout_constraintBottom_toBottomOf="@id/tvGasolineConsumption" />
+
+    <TextView
+            android:id="@+id/tvEthanolConsumption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/ethanol_consumption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGasolineConsumption" />
+
+    <EditText
+            android:id="@+id/etEthanolConsumption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvEthanolConsumption"
+            app:layout_constraintTop_toTopOf="@id/tvEthanolConsumption"
+            app:layout_constraintBottom_toBottomOf="@id/tvEthanolConsumption" />
+
+    <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/calculate"
+            app:layout_constraintTop_toBottomOf="@id/tvEthanolConsumption" />
+
+    <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/btnCalculate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
