@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">FuelCostCalculator</string>
-    <string name="app_title">Calculadora de Combustível Flex</string>
+    <string name="app_title">Calculadora de custos</string>
     <string name="fuel_prices">Preços dos Combustíveis</string>
     <string name="gasoline_price">Preço da Gasolina (R$):</string>
     <string name="ethanol_price">Preço do Etanol (R$):</string>
@@ -18,5 +18,12 @@
     <string name="cost_per_km_gasoline">Custo por km (Gasolina): R$ %s</string>
     <string name="cost_per_km_ethanol">Custo por km (Etanol): R$ %s</string>
     <string name="price_ratio">Relação de preço (Etanol/Gasolina): %s%%</string>
+    <string name="add_fuel">Adicionar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="add_new_fuel">Adicionar Novo Combustível</string>
+    <string name="fuel_name">Nome do combustível</string>
+    <string name="more_economical">%s é mais econômico!</string>
+    <string name="cost_per_km">Custo por km (%s): R$ %s</string>
+    <string name="hide_fuel">Ocultar</string>
 
 </resources>

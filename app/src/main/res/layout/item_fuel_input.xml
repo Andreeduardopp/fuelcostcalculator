@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+            <ImageView
+                    android:id="@+id/ivFuelIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="Fuel icon"
+                    android:layout_marginEnd="8dp"/>
+
+            <TextView
+                    android:id="@+id/tvFuelName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fuel Name"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+            <Button
+                    android:id="@+id/btnHide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hide_fuel"
+                    android:textSize="11sp"
+                    android:minWidth="0dp"
+                    android:minHeight="36dp"
+                    android:paddingHorizontal="12dp"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+            />
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="12dp"/>
+
+        <!-- Price input -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preço (R$):"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp" />
+
+            <EditText
+                    android:id="@+id/etPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:hint="0.00"
+                    android:textSize="16sp"
+                    android:background="@drawable/edit_text_background"
+                    android:padding="8dp" />
+        </LinearLayout>
+
+        <!-- Consumption input -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Consumo (km/l):"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp" />
+
+            <EditText
+                    android:id="@+id/etConsumption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:hint="0.00"
+                    android:textSize="16sp"
+                    android:background="@drawable/edit_text_background"
+                    android:padding="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
