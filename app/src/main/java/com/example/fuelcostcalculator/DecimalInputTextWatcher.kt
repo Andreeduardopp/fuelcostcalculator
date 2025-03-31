@@ -28,7 +28,6 @@ class DecimalInputTextWatcher(private val editText: EditText) : TextWatcher {
                     currency = Currency.getInstance("BRL")
                 }.format(parsed)
 
-                // Remove currency symbol and keep only the number with decimal places
                 val finalFormatted = formatted.replace(Regex("[R$\\s,]"), "")
 
                 current = finalFormatted

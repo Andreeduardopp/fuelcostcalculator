@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvResult: TextView
 
     // Maps to store references to EditText fields
-    private val priceFields = mutableMapOf<String, EditText>()
-    private val consumptionFields = mutableMapOf<String, EditText>()
+    val priceFields = mutableMapOf<String, EditText>()
+    val consumptionFields = mutableMapOf<String, EditText>()
 
     companion object {
         const val EXTRA_FUEL_TYPE = "fuel_type"
@@ -180,6 +180,9 @@ class MainActivity : AppCompatActivity() {
             if (price > 0 && consumption > 0) {
                 val costPerKm = price / consumption
                 fuelCosts.add(Pair(fuel.id, costPerKm))
+            } else {
+                tvResult.text = getString(R.string.invalid_input)
+                return
             }
         }
 
